@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon main.js -h localhost -p 3000 -c .cache",
+    "start": "nodemon main.js --host localhost --port 3000 --cache .cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

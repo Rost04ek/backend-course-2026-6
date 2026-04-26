@@ -107,7 +107,7 @@ app.get('/inventory/:id/photo', (req, res) => {
   if (!fs.existsSync(photoPath)) return res.status(404).send('Not found');
 
   res.setHeader('Content-Type', 'image/jpeg');
-  res.sendFile(photoPath);
+  res.sendFile(photoPath, { dotfiles: 'allow' });
 });
 
 app.put('/inventory/:id/photo', upload.single('photo'), (req, res) => {
